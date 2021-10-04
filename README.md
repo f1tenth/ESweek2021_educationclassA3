@@ -6,10 +6,26 @@ This is the repository that includes the code material for the ESweek 2021 for t
 
 # Environment Installation guide
 
-1. Create an Virtual Environment with Python 3.8
-2. Install the required python packages with the following command:
+1. Start by installing a Virtual Environment (`virtualenv`) with Python 3.8 in the repository:
 
-```bash
+- Install the `virtualenv` package
+```
+pip3 install virtualenv
+```
+
+- Create a virtual environment
+```
+virtualenv venv
+```
+
+- Enable the virtual environment
+```
+source venv/bin/activate
+```
+
+2. Install the required python packages within the`virtualenv` with the following command:
+
+```
 pip3 install -r requirements.txt
 ```
 3. Install the F1TENTH gym environment while in the root folder of this repository by running the following command:
