@@ -8,7 +8,7 @@ This is the repository that includes the code material for the ESweek 2021 for t
 
 1. Start by installing a Virtual Environment (`virtualenv`) with Python 3.8 in the repository:
 
-- Install the `virtualenv` package
+- Install the `virtualenv` python3 package
 ```
 pip3 install virtualenv
 ```
