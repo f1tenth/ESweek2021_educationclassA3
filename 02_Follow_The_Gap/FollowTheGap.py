@@ -31,7 +31,7 @@ class GymRunner(object):
     def run(self):
         # load map
 
-        with open('config_Spielberg_map.yaml') as file:
+        with open('config_Spielberg_obs_map.yaml') as file:
             conf_dict = yaml.load(file, Loader=yaml.FullLoader)
         conf = Namespace(**conf_dict)
 

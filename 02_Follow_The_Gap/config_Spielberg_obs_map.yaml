@@ -5,7 +5,7 @@ logging: 'True'
 perf_num: 6
 
 # map paths
-map_path: './Spielberg_map'
+map_path: './Spielberg_obs_map'
 map_ext: '.png'
 
 # starting pose for map  sx: -0.0440806 sy: -0.8491629
