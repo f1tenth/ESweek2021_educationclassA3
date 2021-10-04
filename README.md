@@ -1,4 +1,7 @@
 # ESweek2021_educationclassA3
+
+![Title Picture ESWeek 2021](docs/Title.png)
+
 This is the repository that includes the code material for the ESweek 2021 for the Education Class Lecture A3 "Learn to Drive (and Race!) Autonomous Vehicles"
 
 # Environment Installation guide
