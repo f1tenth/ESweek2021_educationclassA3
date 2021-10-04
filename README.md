@@ -18,12 +18,30 @@ $ pip3 install -e gym/
 
 ## Follow the Gap
 
+1. Change to the Folder 01_Follow_The_Gap
+
+2. To experience the Follow the Gap algorithm, run the following command.
+```bash
+$ python3 FollowTheGap.py
+```
+
+3. You will see the simulation starting and a new windows with the simulation environment is popping up. This algorithm is running on a map that has obstacles included and you see the algorithm is avoiding these obstacles.
+
+4. You can adjust the Follow The Gap parameter in the drivers.py file
+
+
 ## Follow the Raceline: Pure Pursuit
 
-1. To experience the raceline follower, run the following command.
+1. Change to the Folder 01_Follow_The_Gap
+
+2. To experience the Follow the Gap algorithm, run the following command.
 ```bash
 $ python3 PurePursuit.py
 ```
+
+3. You will see the simulation starting and a new windows with the simulation environment is popping up. This algorithm is following a precalculated racline which is displayed in the simulation environment.
+
+4. You can adjust the Pure Pursuit parameter in the drivers.py file
 
 
 # Known issues
