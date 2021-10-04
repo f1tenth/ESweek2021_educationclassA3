@@ -1,0 +1,63 @@
+# metadata
+run_name: 'map_wide'
+logging: 'True'
+# characteristic number for map
+perf_num: 6
+
+# map paths
+map_path: './Spielberg_map'
+map_ext: '.png'
+
+# starting pose for map  sx: -0.0440806 sy: -0.8491629
+# Start\ Finish Line: -0.0440806; -0.8491629; 3.4034118;
+# T1 (Niki Lauda): -26.8810112; -8.0811682; 3.3949863;
+# T2 (Remus): -72.7851387; 47.1581236; 2.3546648
+# T3 (Schlossgold):
+# T4 (Rauch):
+# T5 (Wuerth):
+# T7 (Rindt):
+# Middle section: -51.7582509;52.9369422;6.1060188;
+sx: -0.044081
+sy: -0.849163
+stheta: 3.4034118
+
+sx2: -72.7851387
+sy2: 47.1581236
+stheta2: 2.3546648
+
+sx3: 2.6599770
+sy3: -0.1246830
+stheta3: 3.4
+
+
+# raceline path and indices
+wpt_path: './Spielberg_raceline.csv'
+wpt_path2: './Spielberg_centerline.csv'
+wpt_delim: ';'
+wpt_rowskip: 3
+wpt_xind: 1
+wpt_yind: 2
+wpt_thind: 3
+wpt_vind: 5
+
+# varied params bound
+# physical params
+mass_min: 3.0
+mass_max: 4.0
+lf_min: 0.147
+lf_max: 0.170
+# controller params
+tlad_min: 0.2
+tlad_max: 5.
+vgain_min: 0.5
+vgain_max: 1.5
+
+# computation budget (can think of it as gen_num times pop_size)
+popsize: 100
+budget: 1000
+
+# optimization method
+optim_method: 'CMA'
+
+# seed
+seed: 12345
