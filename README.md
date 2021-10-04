@@ -18,7 +18,12 @@ $ pip3 install -e gym/
 
 # Follow the Gap
 
-# Follow the raceline: Pure Pursuit
+# Follow the Raceline: Pure Pursuit
+
+1. To experience the raceline follower, run the following command.
+```bash
+$ python3 PurePursuit.py
+```
 
 
 ## Known issues
