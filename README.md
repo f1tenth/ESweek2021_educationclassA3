@@ -13,7 +13,7 @@ pip3 install -r requirements.txt
 ```bash
 $ pip3 install -e gym/
 ```
-
+4. For more information about the F1TENTH Gym environment you can have a look at the the [documentation](https://f1tenth-gym.readthedocs.io/en/latest/) here.
 # Run the ESWeek Lecture
 
 ## Follow the Gap
