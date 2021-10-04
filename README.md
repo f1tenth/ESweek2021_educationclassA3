@@ -16,7 +16,7 @@ $ pip3 install -e gym/
 4. For more information about the F1TENTH Gym environment you can have a look at the the [documentation](https://f1tenth-gym.readthedocs.io/en/latest/) here.
 # Run the ESWeek Lecture
 
-## Follow the Gap
+## 1. Avoid the Crash: Follow the Gap
 
 1. Change to the Folder 01_Follow_The_Gap
 
@@ -30,7 +30,7 @@ $ python3 FollowTheGap.py
 4. You can adjust the Follow The Gap parameter in the drivers.py file
 
 
-## Follow the Raceline: Pure Pursuit
+## 2. Follow the Raceline: Pure Pursuit
 
 1. Change to the Folder 01_Follow_The_Gap
 
@@ -43,7 +43,7 @@ $ python3 PurePursuit.py
 
 4. You can adjust the Pure Pursuit parameter in the drivers.py file
 
-## Race: Graph Based Planner
+## 3. Race: Graph Based Planner
 
 1. Change to the Folder 03_GraphBasedPlanner
 
