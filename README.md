@@ -43,6 +43,19 @@ $ python3 PurePursuit.py
 
 4. You can adjust the Pure Pursuit parameter in the drivers.py file
 
+## Race: Graph Based Planner
+
+1. Change to the Folder 03_GraphBasedPlanner
+
+2. To experience the Graph based planner algorithm, run the following command.
+```bash
+$ python3 GraphPlanner_MultiVehiclepy.py.
+```
+
+3. You will see the simulation starting and a new windows with the simulation environment is popping up. In addition first of all the graph for the whole racetrack is created. This algorithm is following a precalculated racline which while avoiding and overtaking obstacles - fast and safe.
+
+4. A detailed documentation and explanation of the GraphBasedPlanner can be found [here](https://graphbasedlocaltrajectoryplanner.readthedocs.io/).
+
 
 # Known issues
 - On MacOS Big Sur and above, when rendering is turned on, you might encounter the error:
