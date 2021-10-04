@@ -4,9 +4,7 @@ import yaml
 import gym
 import numpy as np
 from argparse import Namespace
-
 from numba import njit
-
 from pyglet.gl import GL_POINTS
 
 """
@@ -262,8 +260,7 @@ def main():
 
     while not done:
 
-        speed, steer = planner.plan(obs['poses_x'][0], obs['poses_y'][0], obs['poses_theta'][0], work['tlad'],
-                                    work['vgain'])
+        speed, steer = planner.plan(obs['poses_x'][0], obs['poses_y'][0], obs['poses_theta'][0], work['tlad'], work['vgain'])
         obs, step_reward, done, info = env.step(np.array([[steer, speed]]))
         laptime += step_reward
         env.render(mode='human')

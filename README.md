@@ -1,7 +1,7 @@
-## ESweek2021_educationclassA3
+# ESweek2021_educationclassA3
 This is the repository that includes the code material for the ESweek 2021 for the Education Class Lecture A3 "Learn to Drive (and Race!) Autonomous Vehicles"
 
-## Environment Installation guide
+# Environment Installation guide
 
 1. Create an Virtual Environment with Python 3.8
 2. Install the required python packages with the following command:
@@ -14,11 +14,11 @@ pip3 install -r requirements.txt
 $ pip3 install -e gym/
 ```
 
-## Run the ESWeek Lecture
+# Run the ESWeek Lecture
 
-# Follow the Gap
+## Follow the Gap
 
-# Follow the Raceline: Pure Pursuit
+## Follow the Raceline: Pure Pursuit
 
 1. To experience the raceline follower, run the following command.
 ```bash
@@ -26,7 +26,7 @@ $ python3 PurePursuit.py
 ```
 
 
-## Known issues
+# Known issues
 - On MacOS Big Sur and above, when rendering is turned on, you might encounter the error:
 ```
 ImportError: Can't find framework /System/Library/Frameworks/OpenGL.framework.

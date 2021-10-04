@@ -69,7 +69,7 @@ class EnvRenderer(pyglet.window.Window):
         super().__init__(width, height, config=conf, resizable=True, vsync=False, *args, **kwargs)
 
         # gl init
-        glClearColor(9/255, 32/255, 87/255, 1.)
+        glClearColor(9/255, 32/255, 87/255, 0)
 
         # initialize camera values
         self.left = -width/2
