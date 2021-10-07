@@ -11,14 +11,14 @@ from argparse import Namespace
 current_dir = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(current_dir)
 
-# import your drivers here
-from drivers import DisparityExtender
+# Import your drivers here
+
 from drivers import GapFollower
 
-# choose your drivers here (1-4)
+# Choose your drivers for each of the cars you have on the track here.
 drivers = [GapFollower()]
 
-# choose your racetrack here (SOCHI, SOCHI_OBS)
+# Choose your racetrack here
 RACETRACK = 'Spielberg'
 
 
@@ -29,15 +29,16 @@ class GymRunner(object):
         self.drivers = drivers
 
     def run(self):
-        # load map
 
+        # load map and the specific information for the map
         with open('config_Spielberg_obs_map.yaml') as file:
             conf_dict = yaml.load(file, Loader=yaml.FullLoader)
         conf = Namespace(**conf_dict)
 
+        # Create the F1TENTH GYM environment
         env = gym.make('f110_gym:f110-v0', map=conf.map_path, map_ext=conf.map_ext, num_agents=1)
 
-        # specify starting positions of each agent
+        # Specify starting positions of each agent
         driver_count = len(drivers)
         if driver_count == 1:
             poses = np.array([[0.8007017, -0.2753365, 4.1421595]])
@@ -49,12 +50,13 @@ class GymRunner(object):
         else:
             raise ValueError("Max 2 drivers are allowed")
 
+        # Initially parametrize the environment
         obs, step_reward, done, info = env.reset(poses=poses)
         env.render()
-
         laptime = 0.0
         start = time.time()
 
+        # Start the simulation
         while not done:
             actions = []
             futures = []
@@ -62,9 +64,12 @@ class GymRunner(object):
                 for i, driver in enumerate(drivers):
                     futures.append(executor.submit(driver.process_lidar, obs['scans'][i]))
             for future in futures:
+                # Get the actions based on the Follow the Gap Algorithm
                 speed, steer = future.result()
                 actions.append([steer, speed])
             actions = np.array(actions)
+
+            # Send the actions from the Follow the Gap to the simulation environment
             obs, step_reward, done, info = env.step(actions)
             laptime += step_reward
             env.render(mode='human')

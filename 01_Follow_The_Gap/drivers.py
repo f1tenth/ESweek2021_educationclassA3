@@ -2,12 +2,12 @@ import numpy as np
 
 
 class GapFollower:
-    BUBBLE_RADIUS = 160
+    BUBBLE_RADIUS = 160  # in cm
     PREPROCESS_CONV_SIZE = 3
     BEST_POINT_CONV_SIZE = 80
-    MAX_LIDAR_DIST = 3000000
-    STRAIGHTS_SPEED =4.0
-    CORNERS_SPEED = 4.0
+    MAX_LIDAR_DIST = 3000000    # =3m
+    STRAIGHTS_SPEED =6.0
+    CORNERS_SPEED = 6.0
     STRAIGHTS_STEERING_ANGLE = np.pi / 18  # 10 degrees
 
     def __init__(self):
@@ -65,8 +65,12 @@ class GapFollower:
         return steering_angle
 
     def process_lidar(self, ranges):
-        """ Process each LiDAR scan as per the Follow Gap algorithm & publish an AckermannDriveStamped Message
+
         """
+        This is the main function that is getting called from the simulation
+        Process each LiDAR scan as per the Follow Gap algorithm & publish an AckermannDriveStamped Message
+        """
+        # Preprocess the Lidar Information
         proc_ranges = self.preprocess_lidar(ranges)
         # Find closest point to LiDAR
         closest = proc_ranges.argmin()
@@ -84,45 +88,15 @@ class GapFollower:
         # Find the best point in the gap
         best = self.find_best_point(gap_start, gap_end, proc_ranges)
 
-        # Publish Drive message
+        # Get the final steering angle and speed value
         steering_angle = self.get_angle(best, len(proc_ranges))
         if abs(steering_angle) > self.STRAIGHTS_STEERING_ANGLE:
             speed = self.CORNERS_SPEED
         else:
             speed = self.STRAIGHTS_SPEED
-        #print('Steering angle in degrees: {}'.format((steering_angle / (np.pi / 2)) * 90))
+
+        # Send back the speed and steering angle to the simulation
         return speed, steering_angle
-
-
-# drives straight ahead at a speed of 5
-class SimpleDriver:
-
-    def process_lidar(self, ranges):
-        speed = 5.0
-        steering_angle = 0.0
-        return speed, steering_angle
-
-
-# drives toward the furthest point it sees
-class AnotherDriver:
-
-    def process_lidar(self, ranges):
-        # the number of LiDAR points
-        NUM_RANGES = len(ranges)
-        # angle between each LiDAR point
-        ANGLE_BETWEEN = 2 * np.pi / NUM_RANGES
-        # number of points in each quadrant
-        NUM_PER_QUADRANT = NUM_RANGES // 4
-
-        # the index of the furthest LiDAR point (ignoring the points behind the car)
-        max_idx = np.argmax(ranges[NUM_PER_QUADRANT:-NUM_PER_QUADRANT]) + NUM_PER_QUADRANT
-        # some math to get the steering angle to correspond to the chosen LiDAR point
-        steering_angle = max_idx * ANGLE_BETWEEN - (NUM_RANGES // 2) * ANGLE_BETWEEN
-        speed = 5.0
-
-        return speed, steering_angle
-
-import numpy as np
 
 
 class DisparityExtender:
