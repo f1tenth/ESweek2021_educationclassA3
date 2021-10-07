@@ -484,7 +484,7 @@ class GraphBasedPlanner:
                                                        vel_est=vel_est)[0]
 
         # -- LIVE PLOT (if activated - not recommended for performance use) --------------------------------------------
-        #self.ltpl_obj.visual()
+        self.ltpl_obj.visual()
 
         # -- LOGGING ---------------------------------------------------------------------------------------------------
         self.ltpl_obj.log()
@@ -498,7 +498,7 @@ class GraphBasedPlanner:
 
         # Fast Setup: lookehead: 1.05, vgain: 0.92
         #speed, steering_angle = controller.PurePursuit(pose_x, pose_y, pose_theta, 1.05, 0.80, traj_set, sel_action)
-        steering_angle, speed = controller.StanleyController(pose_x, pose_y, pose_theta, current_velocity, 0.65, traj_set, sel_action)
+        steering_angle, speed = controller.StanleyController(pose_x, pose_y, pose_theta, current_velocity, 0.75, traj_set, sel_action)
 
         #print('Planned Speed:', speed, 'Current Speed:', velocity)
 

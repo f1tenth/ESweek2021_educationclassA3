@@ -132,12 +132,17 @@ def get_actuation(pose_theta, lookahead_point, position, lookahead_distance, whe
     """
     Returns actuation
     """
+    # Extract the Waypoint information
     waypoint_y = np.dot(np.array([np.sin(-pose_theta), np.cos(-pose_theta)]), lookahead_point[0:2] - position)
     speed = lookahead_point[2]
     if np.abs(waypoint_y) < 1e-6:
         return speed, 0.
+    # Define the radius of the arc to follow
     radius = 1 / (2.0 * waypoint_y / lookahead_distance ** 2)
+
+    # Calculate the steering angle based on the curvature of the arc to follow
     steering_angle = np.arctan(wheelbase / radius)
+
     return speed, steering_angle
 
 
@@ -205,12 +210,16 @@ class PurePursuitPlanner:
         """
         gives actuation given observation
         """
+        # Get the current Position of the car
         position = np.array([pose_x, pose_y])
+
+        # Search for the next waypoint to track based on lookahead distance parameter
         lookahead_point = self._get_current_waypoint(self.waypoints, lookahead_distance, position, pose_theta)
 
         if lookahead_point is None:
             return 4.0, 0.0
 
+        # Calculate the Actuation: Steering angle and speed
         speed, steering_angle = get_actuation(pose_theta, lookahead_point, position, lookahead_distance, self.wheelbase)
         speed = vgain * speed
 
@@ -222,8 +231,7 @@ def main():
     main entry point
     """
 
-    work = {'mass': 3.463388126201571, 'lf': 0.15597534362552312, 'tlad': 0.82461887897713965,
-            'vgain': 0.5}
+    work = {'mass': 3.463388126201571, 'lf': 0.15597534362552312, 'tlad': 0.80, 'vgain': 1.0}
 
     with open('config_Spielberg_map.yaml') as file:
         conf_dict = yaml.load(file, Loader=yaml.FullLoader)
@@ -232,20 +240,6 @@ def main():
     planner = PurePursuitPlanner(conf, 0.17145 + 0.15875)
 
     def render_callback(env_renderer):
-        # custom extra drawing function
-
-        # e = env_renderer
-
-        # update camera to follow car
-        # x = e.cars[0].vertices[::2]
-        # y = e.cars[0].vertices[1::2]
-        # top, bottom, left, right = max(y), min(y), min(x), max(x)
-        # e.score_label.x = left
-        # e.score_label.y = top - 700
-        # e.left = left - 800
-        # e.right = right + 800
-        # e.top = top + 800
-        # e.bottom = bottom - 800
 
         planner.render_waypoints(env_renderer)
 
