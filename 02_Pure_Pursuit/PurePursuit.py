@@ -231,7 +231,7 @@ def main():
     main entry point
     """
 
-    work = {'mass': 3.463388126201571, 'lf': 0.15597534362552312, 'tlad': 0.80, 'vgain': 0.5}
+    work = {'mass': 3.463388126201571, 'lf': 0.15597534362552312, 'tlad': 0.8, 'vgain': 1.0}
 
     with open('config_Spielberg_map.yaml') as file:
         conf_dict = yaml.load(file, Loader=yaml.FullLoader)
