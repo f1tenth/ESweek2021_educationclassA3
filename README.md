@@ -4,6 +4,8 @@
 
 This is the repository that includes the code material for the ESweek 2021 for the Education Class Lecture A3 "Learn to Drive (and Race!) Autonomous Vehicles"
 
+Lecture videos: [Youtube Playlist](https://www.youtube.com/watch?v=IZAu0vGDis0&list=PL7rtKJAz_mPfco1w8SBygmroa27TyFSLy)
+
 Lecturers:
 * [Johannes Betz](https://joebetz.science/)
 * [Rahul Mangharam](https://www.seas.upenn.edu/~rahulm/)
@@ -68,7 +70,7 @@ $ python3 PurePursuit.py
 
 5. To get a minimum curvature or minimum time global optimal raceline we recommend that you use the methods and code that is displaye [here](https://github.com/TUMFTM/global_racetrajectory_optimization)
 
-## 3. Race: Graph Based Planner
+## 3. Race and Overtake: Graph Based Planner
 
 1. Change to the Folder 03_GraphBasedPlanner
 
