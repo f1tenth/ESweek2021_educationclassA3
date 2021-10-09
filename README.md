@@ -81,7 +81,7 @@ $ python3 GraphPlanner_MultiVehiclepy.py
 
 3. You will see the simulation starting and a new windows with the simulation environment is popping up. In addition first of all the graph for the whole racetrack is created. This algorithm is following a precalculated racline which while avoiding and overtaking obstacles - fast and safe.
 
-4. A detailed documentation and explanation of the GraphBasedPlanner can be found [here](https://graphbasedlocaltrajectoryplanner.readthedocs.io/).
+4. A detailed documentation and explanation of the Graph Based Planner can be found [here](https://graphbasedlocaltrajectoryplanner.readthedocs.io/).
 
 
 # Known issues
