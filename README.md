@@ -103,7 +103,7 @@ which could be ignored. The environment should still work without error.
 # References
 For this repository we are using the theoretical foundations, images and code from the following papers. If you find our work useful in your research, please consider citing:
 
-* J. Betz, A. Wischnewski, A. Heilmeier, F. Nobis, T. Stahl, L. Hermansdorfer, B. Lohmann, M. Lienkamp [(PDF)](https://www.researchgate.net/publication/327892743_What_can_we_learn_from_autonomous_level-5_motorsport_chassistech_plus)
+* J. Betz, A. Wischnewski, A. Heilmeier, F. Nobis, T. Stahl, L. Hermansdorfer, B. Lohmann, M. Lienkamp "What we can learn from autonomous racing",2018, Springer [(PDF)](https://www.researchgate.net/publication/327892743_What_can_we_learn_from_autonomous_level-5_motorsport_chassistech_plus)
 
 * M. O’Kelly, H. Zheng, D. Karthik, R. Mangharam "F1TENTH: An Open-source Evaluation Environment for Continuous Control and Reinforcement Learning" in Proceedings of the NeurIPS 2019 Competition and Demonstration Track, PMLR 123:77-89, 2020. [(PDF)](https://proceedings.mlr.press/v123/o-kelly20a.html)
 
