@@ -10,6 +10,7 @@ Lecturers:
 * [Johannes Betz](https://joebetz.science/)
 * [Rahul Mangharam](https://www.seas.upenn.edu/~rahulm/)
 
+The following code was tested on both MacOS (Big Sur, Monterey) and Linux (Ubuntu 18.04, 20.04)
 # Environment Installation guide
 
 1. Start by installing a Virtual Environment (`virtualenv`) with Python 3.8 in the repository:
