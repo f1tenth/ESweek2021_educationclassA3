@@ -11,6 +11,18 @@ Lecturers:
 * [Rahul Mangharam](https://www.seas.upenn.edu/~rahulm/)
 
 The following code was tested on both MacOS (Big Sur, Monterey) and Linux (Ubuntu 18.04, 20.04)
+# Paper Reference
+The content of this repository was used to create the paper ["Autonomous Vehicles on the Edge: A survey on autonomous racing"](https://arxiv.org/abs/2202.07008). If you find the information in this respository useful we would be happy if you cite it based on the following definition:
+
+```
+  @misc{2202.07008,
+    Author = {Johannes Betz and Hongrui Zheng and Alexander Liniger and Ugo Rosolia and Phillip Karle and Madhur Behl and Venkat Krovi and Rahul Mangharam},
+    Title = {Autonomous Vehicles on the Edge: A Survey on Autonomous Vehicle Racing},
+    Year = {2022},
+    Eprint = {arXiv:2202.07008},
+    }
+```
+
 # Environment Installation guide
 
 1. Start by installing a Virtual Environment (`virtualenv`) with Python 3.8 in the repository:
