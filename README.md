@@ -15,12 +15,19 @@ The following code was tested on both MacOS (Big Sur, Monterey) and Linux (Ubunt
 The content of this repository was used to create the paper ["Autonomous Vehicles on the Edge: A survey on autonomous racing"](https://arxiv.org/abs/2202.07008). If you find the information in this respository useful we would be happy if you cite it based on the following definition:
 
 ```
-  @misc{2202.07008,
-    Author = {Johannes Betz and Hongrui Zheng and Alexander Liniger and Ugo Rosolia and Phillip Karle and Madhur Behl and Venkat Krovi and Rahul Mangharam},
-    Title = {Autonomous Vehicles on the Edge: A Survey on Autonomous Vehicle Racing},
-    Year = {2022},
-    Eprint = {arXiv:2202.07008},
-    }
+@article{Betz2022_RacingSurvey,
+title     = "Autonomous vehicles on the edge: A survey on autonomous vehicle
+             racing",
+author    = "Betz, Johannes and Zheng, Hongrui and Liniger, Alexander and
+             Rosolia, Ugo and Karle, Phillip and Behl, Madhur and Krovi,
+             Venkat and Mangharam, Rahul",
+journal   = "IEEE Open J. Intell. Transp. Syst.",
+publisher = "Institute of Electrical and Electronics Engineers (IEEE)",
+volume    =  3,
+pages     = "458--488",
+year      =  2022,
+doi = "10.1109/ojits.2022.3181510"
+}
 ```
 
 # Environment Installation guide
